@@ -10,18 +10,18 @@
     "tauri": "tauri"
   },
   "dependencies": {
+    "@tauri-apps/api": "^1.2.0",
     "react": "next",
-    "react-dom": "next",
-    "@tauri-apps/api": "^1.2.0"
+    "react-dom": "next"
   },
   "devDependencies": {
+    "@acme/eslint-config": "*",
+    "@tauri-apps/cli": "^1.2.3",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
-    "typescript": "^5.0.2",
-    "vite": "^4.2.1",
     "eslint": "^8.36.0",
-    "@acme/eslint-config": "*",
-    "@tauri-apps/cli": "^1.2.3"
+    "typescript": "^5.0.2",
+    "vite": "^4.2.1"
   }
 }
