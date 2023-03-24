@@ -2,7 +2,7 @@ import { useState } from "react";
 import { invoke } from "@tauri-apps/api/tauri";
 
 import reactLogo from "./assets/react.svg";
-import "~/styles/App.css";
+import "./styles/App.css";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
