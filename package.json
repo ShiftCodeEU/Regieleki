@@ -1,33 +1,51 @@
 {
   "name": "regieleki",
+  "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "packageManager": "pnpm@7.30.0",
   "scripts": {
-    "build": "pnpm with-env turbo build",
-    "clean": "git clean -xdf node_modules",
-    "clean:workspaces": "turbo clean",
-    "db:generate": "pnpm with-env turbo db:generate",
-    "db:push": "pnpm with-env turbo db:push db:generate",
-    "dev": "pnpm with-env turbo dev --parallel",
-    "format": "prettier --write \"**/*.{js,cjs,mjs,ts,tsx,md,json}\" --ignore-path .gitignore",
-    "lint": "turbo lint && manypkg check",
-    "lint:fix": "turbo lint:fix && manypkg fix",
-    "type-check": "turbo type-check",
-    "with-env": "dotenv -e .env --"
+    "dev": "next dev",
+    "tauri-dev": "tauri dev",
+    "build": "next build",
+    "build-export": "next build && next export",
+    "tauri-build": "tauri build",
+    "postinstall": "prisma generate",
+    "start": "next start",
+    "tauri": "tauri",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@acme/eslint-config": "*",
-    "@ianvs/prettier-plugin-sort-imports": "^3.7.1",
-    "@manypkg/cli": "^0.20.0",
+    "@prisma/client": "^4.11.0",
+    "@tanstack/react-query": "^4.28.0",
+    "@trpc/client": "^10.18.0",
+    "@trpc/next": "^10.18.0",
+    "@trpc/react-query": "^10.18.0",
+    "@trpc/server": "^10.18.0",
+    "next": "canary",
+    "react": "next",
+    "react-dom": "next",
+    "superjson": "1.12.2",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.2.3",
+    "@types/eslint": "^8.21.3",
+    "@types/node": "^18.15.10",
     "@types/prettier": "^2.7.2",
-    "dotenv-cli": "^7.1.0",
+    "@types/react": "^18.0.29",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "autoprefixer": "^10.4.14",
     "eslint": "^8.36.0",
+    "eslint-config-next": "^13.2.4",
+    "postcss": "^8.4.21",
     "prettier": "^2.8.7",
     "prettier-plugin-tailwindcss": "^0.2.5",
-    "turbo": "canary",
+    "prisma": "^4.11.0",
+    "tailwindcss": "^3.2.7",
     "typescript": "^5.0.2"
+  },
+  "ct3aMetadata": {
+    "initVersion": "7.10.0"
   }
 }
