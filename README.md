@@ -4,6 +4,9 @@
   <a href="https://github.com/ShiftCodeEU/Regieleki/blob/main/LICENCE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
+  <a href="https://github.com/ShiftCodeEU/Regieleki/actions/workflows/ci.yml">
+    <img src="https://github.com/ShiftCodeEU/Regieleki/actions/workflows/ci.yml/badge.svg?branch=main"/>
+  </a>
 </p>
 
 > Blazingly fast pokedex application completely fullstack using the t3-turbo setup.
