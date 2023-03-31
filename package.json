@@ -2,6 +2,7 @@
   "name": "regieleki",
   "version": "0.0.1",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "tauri-dev": "tauri dev",
