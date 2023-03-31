@@ -23,13 +23,18 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2.2.4
-
       - name: Setup Node 18
         uses: actions/setup-node@v3
         with:
           node-version: 18
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 6.0.2
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile]
 
       - name: Get pnpm store directory
         id: pnpm-cache
@@ -48,14 +53,12 @@ jobs:
         run: pnpm install
 
       # Normally, this would be done as part of the turbo pipeline - however since the Expo app doesn't depend on `@acme/db` it doesn't care.
-      # TODO: Free for all to find a better solution here.
-      - name: Generate Prisma Client
-        run: pnpm turbo db:generate
+      # # TODO: Free for all to find a better solution here.
+      # - name: Generate Prisma Client
+      #   run: pnpm turbo db:generate
 
       - name: Build, lint and type-check
         run: pnpm turbo build lint type-check
-        env:
-          SKIP_ENV_VALIDATION: true
 
       - name: Check workspaces
         run: pnpm manypkg check
