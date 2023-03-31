@@ -54,8 +54,8 @@ jobs:
       # - name: Generate Prisma Client
       #   run: pnpm turbo db:generate
 
-      - name: Build, lint and type-check
-        run: pnpm turbo build lint type-check
+      - name: Build project
+        run: pnpm next build
 
-      - name: Check workspaces
-        run: pnpm manypkg check
+      - name: Check linting
+        run: pnpm next lint
