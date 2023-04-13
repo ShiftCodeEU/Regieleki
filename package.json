@@ -11,29 +11,30 @@
     "tauri-build": "tauri build",
     "start": "next start",
     "tauri": "tauri",
-    "lint": "next lint"
+    "lint": "next lint",
+    "upgrade:force": "pnpm i next@canary react@next react-dom@next"
   },
   "dependencies": {
-    "next": "canary",
-    "react": "next",
-    "react-dom": "next"
+    "next": "13.3.1-canary.6",
+    "react": "18.3.0-next-7b0642bb9-20230412",
+    "react-dom": "18.3.0-next-7b0642bb9-20230412"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^1.2.3",
     "@types/eslint": "^8.37.0",
     "@types/node": "^18.15.11",
     "@types/prettier": "^2.7.2",
-    "@types/react": "^18.0.31",
+    "@types/react": "^18.0.35",
     "@types/react-dom": "^18.0.11",
-    "@typescript-eslint/eslint-plugin": "^5.56.0",
-    "@typescript-eslint/parser": "^5.57.0",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
     "autoprefixer": "^10.4.14",
-    "eslint": "^8.37.0",
-    "eslint-config-next": "^13.2.4",
+    "eslint": "^8.38.0",
+    "eslint-config-next": "^13.3.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.7",
-    "prettier-plugin-tailwindcss": "^0.2.5",
+    "prettier-plugin-tailwindcss": "^0.2.7",
     "tailwindcss": "^3.3.1",
-    "typescript": "^5.0.3"
+    "typescript": "^5.0.4"
   }
 }
